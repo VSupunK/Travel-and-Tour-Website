@@ -9,20 +9,19 @@
     --greyText: rgb(190, 190, 190);
     --inputColor: rgb(239, 239, 239);
     --bodyColor: rgb(240, 240, 246);
-    --cardBG: rgb(255, 255,235);
+    --cardBG: rgb(225, 225,235);
     --cardHover: rgb(255, 255, 255);
 }
   
 .main {
     width: 100%;
-    margin: 0 10px;
   
     .secTitle{
       .title {
         position: relative;
         width: max-content;
         color: var(--textColor);
-        margin: 1rem auto;
+        margin: 1rem 0;
         z-index: 2;
   
         &::after {
@@ -41,7 +40,7 @@
     .secContent {
       justify-content: center;
       gap: 1.5rem;
-      margin: auto;
+      //margin: 0 1.5rem;
   
       .singleDestination {
         height: 100%;
@@ -87,7 +86,7 @@
                 font-size: 1.25rem;
             }
 
-            .continent{
+            .content{
                 gap: .5rem;
 
                 .icon{
@@ -155,5 +154,34 @@
         }
     }
   }
+}
+
+// MEDIA QUERIES ======================>
+
+@media screen and (min-width: 500px){
+    .title{
+        font-size: 1.5rem;
+        &::after{
+            width: 155px !important;
+        }
+    }
+
+    .secContent{
+        grid-template-columns: repeat(2,1fr);
+
+        .singleDestination{
+            height: auto; 
+        }
+    }
+}
+
+@media screen and (min-width: 840px){
+    .secContent{
+        grid-template-columns: repeat(3,1fr);
+
+        .singleDestination{
+            height: auto; 
+        }
+    }
 }
  

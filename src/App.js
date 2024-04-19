@@ -12,7 +12,7 @@ export const App = () => {
     <Navbar/>
     <Home/>
     <Main/>
-    {/*<Footer/>*/}
+    <Footer/>
   </>
   )
 }

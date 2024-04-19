@@ -1,5 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './main.css'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 //import images
 import img1 from '../../Assests/image (1).jpg'
@@ -110,11 +113,16 @@ const Data = [
 ]
 
 const Main = () => {
+   //scroll animation...
+   useEffect(()=>{
+    Aos.init({duration: 2000})
+  }, [])
+
   return (
-    <secion className="main container section">
+    <section className="main container section">
 
       <div className="secTitle">
-        <h3 className="title">Most visited destinations</h3>
+        <h3 data-aos='fade-right' className="title">Most visited destinations</h3>
       </div>
 
       <div className="secContent grid">
@@ -123,14 +131,14 @@ const Main = () => {
             ({id, imgSrc, destTitle, location, grade, fees, description})=>
             {
               return(
-                <div key={id} className="singleDestination">
+                <div key={id} data-aos='fade-up' className="singleDestination">
                   <div className="imageDiv">
                     <img src={imgSrc} alt={destTitle} />
                   </div>
 
                   <div className="cardInfo">
                     <h4 className="destTitle">{destTitle}</h4>
-                    <span className="continent flex">
+                    <span className="content flex">
                       <HiOutlineLocationMarker className='icon'/>
                       <span className="name">{location}</span>
                     </span>
@@ -158,7 +166,7 @@ const Main = () => {
           )
         }
       </div>
-    </secion>
+    </section>
   )
 }
 

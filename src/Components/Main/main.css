@@ -9,20 +9,19 @@
   --greyText: rgb(190, 190, 190);
   --inputColor: rgb(239, 239, 239);
   --bodyColor: rgb(240, 240, 246);
-  --cardBG: rgb(255, 255,235);
+  --cardBG: rgb(225, 225,235);
   --cardHover: rgb(255, 255, 255);
 }
 
 .main {
   width: 100%;
-  margin: 0 10px;
 }
 .main .secTitle .title {
   position: relative;
   width: -moz-max-content;
   width: max-content;
   color: var(--textColor);
-  margin: 1rem auto;
+  margin: 1rem 0;
   z-index: 2;
 }
 .main .secTitle .title::after {
@@ -38,7 +37,6 @@
 .main .secContent {
   justify-content: center;
   gap: 1.5rem;
-  margin: 0 10px;
 }
 .main .secContent .singleDestination {
   height: 100%;
@@ -77,14 +75,14 @@
   color: var(--blackColor);
   font-size: 1.25rem;
 }
-.main .secContent .singleDestination .cardInfo .continent {
+.main .secContent .singleDestination .cardInfo .content {
   gap: 0.5rem;
 }
-.main .secContent .singleDestination .cardInfo .continent .icon {
+.main .secContent .singleDestination .cardInfo .content .icon {
   color: var(--textColor);
   font-size: 18px;
 }
-.main .secContent .singleDestination .cardInfo .continent .name {
+.main .secContent .singleDestination .cardInfo .content .name {
   color: var(--textColor);
   font-weight: 400;
   font-size: 14px;
@@ -132,4 +130,27 @@
 .main .secContent .singleDestination .cardInfo .btn .icon {
   align-self: center;
   font: 18px;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title::after {
+    width: 155px !important;
+  }
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
+}
+@media screen and (min-width: 840px) {
+  .secContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
 }/*# sourceMappingURL=main.css.map */
