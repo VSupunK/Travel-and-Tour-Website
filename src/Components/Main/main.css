@@ -52,6 +52,7 @@
   background: var(--cardHover);
   box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
   transition: 0.3s ease;
+  scale: 1.05;
 }
 .main .secContent .singleDestination .imageDiv {
   height: 180px;

@@ -68,6 +68,11 @@
                         font-weight: 600;
                         &:hover{
                             color: var(--PrimaryColor);
+                            background: var(--SecondaryColor);
+                            border-radius: 1rem;
+                            width: 20px;
+                            height: auto;
+                            padding: 0.5rem 3rem;
                         }
                     }
                 }
